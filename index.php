@@ -13,7 +13,7 @@
 <body>
     <img id="imgPreview">
     <form action="" method="post" enctype="multipart/form-data">
-        <input type="file" name="fileToUpload" id="fileToUpload">
+        <input type="file" name="fileToUpload" id="fileToUpload"><br>
         <button type="submit">Upload</button>
     </form>
 </body>
