@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/uploadPreview.css">
     <!-- js -->
     <script src="./assets/uploadPreview.js" async></script>
-    <title>Document</title>
+    <title>Modules d'enregistrement d'image</title>
 </head>
 <body>
     <img id="imgPreview">
