@@ -9,6 +9,10 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <img id="imgPreview">
+    <form action="" method="post" enctype="multipart/form-data">
+        <input type="file" name="fileToUpload" id="fileToUpload">
+        <button type="submit">Upload</button>
+    </form>
 </body>
 </html>
