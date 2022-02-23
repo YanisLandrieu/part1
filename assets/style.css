@@ -13,7 +13,6 @@ label {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Poppins', sans-serif
 }
 
 body {
@@ -43,12 +42,16 @@ body {
 
 .wrapper .btn {
 	box-shadow: none;
-	width: 100%;
+	width: 80%;
 	height: 40px;
 	background-color: #fff;
 	border-radius: 25px;
 	box-shadow: 3px 3px 3px , -3px -3px 3px ;
 	letter-spacing: 1.3px
+}
+
+form {
+	margin-left: 30px;
 }
 
 
