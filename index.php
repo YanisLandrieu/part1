@@ -1,7 +1,7 @@
 <?php 
 
 if(isset($_FILES['fileToUpload']) && $_FILES['fileToUpload']['error'] ==0){
-    rename("./img/" . $_FILES['fileToUpload']['name'], "./img/" . uniqid());
+    rename("./img/" . $_FILES['fileToUpload']['name'], "./img/" . uniqid().".PNG");
     $tmp = $_FILES['fileToUpload']['tmp_name'];
     $filename = $_FILES['fileToUpload']['name'];
     // droit min sur le dossier img 733 (rwx-wx-wx)
