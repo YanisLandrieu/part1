@@ -1,12 +1,19 @@
 <?php
 
 if (isset($_FILES['fileToUpload']) && $_FILES['fileToUpload']['error'] == 0) {
-     /* rename("./img/" . $_FILES['fileToUpload']['name'], "./img/" . uniqid() . ".PNG"); */
+    /* rename("./img/" . $_FILES['fileToUpload']['name'], "./img/" . uniqid() . ".PNG"); */
     $tmp = $_FILES['fileToUpload']['tmp_name'];
     $filename = $_FILES['fileToUpload']['name'];
     // droit min sur le dossier img 733 (rwx-wx-wx)
     $dest = 'img/';
-
+    $extensions_valides = array('jpg', 'jpeg', 'png');
+    $filename = strtolower($filename);
+    $fileExtension = explode(".", $filename);
+    if (in_array($fileExtension, $extensions_valides)) {
+        echo   $erreurbis = 'Upload effectué avec succès !';
+    } else {
+        echo  $erreurbis = 'Extension incorrecte. Vous ne pouvez utiliser comme image uniquement des fichiers jpg ou png';
+    }
 }
 
 ?>
@@ -33,9 +40,9 @@ if (isset($_FILES['fileToUpload']) && $_FILES['fileToUpload']['error'] == 0) {
             <p class="lead">Mise en pratique PHP : Upload d'images </p>
         </div>
     </div>
-    <div style="margin-left: 15px;" ><?php // à faire lorsque que "tous" les risquesont été évalués
-            if (move_uploaded_file($tmp, $dest . uniqid().".PNG"))
-                echo 'téléchargement réussi'; ?>
+    <div style="margin-left: 15px;"><?php // à faire lorsque que "tous" les risquesont été évalués
+                                    if (move_uploaded_file($tmp, $dest . uniqid() . ".PNG"))
+                                        echo 'téléchargement réussi'; ?>
     </div>
     <label style="margin-left: 15px;" for="fileToUpload">Veuillez choisir une image :</label>
     <img id="imgPreview">
