@@ -1,5 +1,5 @@
-<?php 
+<?php // Vérification des données de login
 
-var_dump($_POST);
+    var_dump($_POST);
 
 ?>

@@ -1,6 +1,6 @@
 <?php 
-
-require_once('./controllers/index-controller.php');
+    include_once 'my-config.php';
+    require_once('./controllers/index-controller.php');
 
 ?>
 
@@ -23,10 +23,10 @@ require_once('./controllers/index-controller.php');
     <div class="wrapper">
         <div class="text-center mt-4 name"> allPIX </div>
         <form method="POST" class="p-3 mt-3" action="">
-            <label for="">Login</label>
-            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span> <input type="text" name="userName" id="userName" placeholder=""> </div>
-            <label for="">Password</label>
-            <div class="form-field d-flex align-items-center"> <span class="fas fa-key"></span> <input type="password" name="password" id="pwd" placeholder=""> </div><br>
+            <label for="login">Login</label>
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span> <input type="text" name="login" id="login"></div>
+            <label for="pwd">Password</label>
+            <div class="form-field d-flex align-items-center"> <span class="fas fa-key"></span> <input type="password" name="password" id="pwd"></div><br>
             <button type="submit" class="btn mt-3">Connexion</button>
         </form>
         </div>
