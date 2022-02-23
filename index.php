@@ -25,9 +25,9 @@ if (isset($_FILES['fileToUpload']) && $_FILES['fileToUpload']['error'] == 0) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- css -->
-    <link rel="stylesheet" href="./assets/uploadPreview.css">
+    <link rel="stylesheet" href="./assets/style.css">
     <!-- js -->
-    <script src="./assets/uploadPreview.js" async></script>
+    <script src="./assets/script.js" async></script>
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Modules d'enregistrement d'image</title>
@@ -40,9 +40,11 @@ if (isset($_FILES['fileToUpload']) && $_FILES['fileToUpload']['error'] == 0) {
             <p class="lead">Mise en pratique PHP : Upload d'images </p>
         </div>
     </div>
-    <div style="margin-left: 15px;"><?php // à faire lorsque que "tous" les risquesont été évalués
-                                    if (move_uploaded_file($tmp, $dest . uniqid() . ".PNG"))
-                                        echo 'téléchargement réussi'; ?>
+    <div style="margin-left: 15px;">
+        <?php // à faire lorsque que "tous" les risquesont été évalués
+            if (move_uploaded_file($tmp, $dest . uniqid() . ".PNG"))
+                echo 'téléchargement réussi'; 
+        ?>
     </div>
     <label style="margin-left: 15px;" for="fileToUpload">Veuillez choisir une image :</label>
     <img id="imgPreview">
