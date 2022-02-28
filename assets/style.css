@@ -42,9 +42,10 @@ body {
 
 .wrapper .btn {
 	box-shadow: none;
-	width: 80%;
+	width: 60%;
 	height: 40px;
 	background-color: #fff;
+	color: rgb(0, 0, 0);
 	border-radius: 25px;
 	box-shadow: 3px 3px 3px , -3px -3px 3px ;
 	letter-spacing: 1.3px
@@ -61,6 +62,9 @@ form {
 	border-color: rgb(4, 233, 4);
 }
 
+.titre {
+	font-size: 2rem;
+}
 
 
 @media(max-width: 380px) {

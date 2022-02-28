@@ -17,13 +17,18 @@
 <body>
     <div class="wrapper">
         <div class="text-center mt-4 name">
-            <p>allPix</p>
+            <p class="titre">allPix</p>
             <p>Bonjour, Admin</p>
         </div>
-        <div class="text-center mt-3 name" >
+        <div class="text-center mt-3 name">
             <p>Quota : </p>
-            <p>Total image(s) : </p>
+            <p>Total image(s) :</p>
         </div>
+        <form action="" method="post" enctype="multipart/form-data" style="margin-left: 90px;">
+            <br><button type="submit" class="btn ">Upload</button><br>
+            <br><button type="submit" class="btn ">Gallery</button>
+        </form><br>
+        <a style="text-decoration: none; color:white; margin-left: 105px;" class="text-center mt-4"  href="">Déconnexion</a>
     </div>
 </body>
 
