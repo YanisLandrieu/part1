@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- css -->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./assets/style.css">
     <!-- js -->
     <script src="./assets/script.js"></script>
     <!-- bootstrap -->
@@ -22,7 +22,7 @@
 <body>
     <div class="wrapper">
         <div class="text-center mt-4 name"> allPIX </div>
-        <form method="POST" class="p-3 mt-3" action="">
+        <form method="POST" class="p-3 mt-3" action="./controllers/index-controller.php">
             <label for="login">Login</label>
             <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span> <input type="text" name="login" id="login" class="<?= ($_POST['login'] == $informationLogin['login']) ? 'correct' : 'incorrect'; ?>"></div>
             <label for="pwd">Password</label>

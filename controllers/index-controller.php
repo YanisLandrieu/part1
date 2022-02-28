@@ -1,17 +1,34 @@
 <?php 
-    include_once 'my-config.php';
-
     // Vérification des données de login
 
-    // var_dump($_POST);
-    // var_dump($informationLogin);
-    // echo $informationLogin['mdp'];
-
-    // function verifyLogin() {
+/**
+ * Fonction qui vérifie le mot de passe
+ *
+ * @return void
+ */
+    function verifyLogin() {
+        include_once('../my-config.php');
         if((isset($_POST['login'])) && (isset($_POST['password']))) {
             if(($_POST['login'] == $informationLogin['login']) && ($_POST['password'] == $informationLogin['mdp'])){
-                echo 'correct';
+                createSession($_POST['login'], $_POST['password']);
+                // require_once('');
+                header("Location: http://part1.test/views/dashboard.php");
             }
         }
-    // }
+    }
+
+/**
+ * Fonction qui créer la session en récupérant le nom d'utilisateur et le mot de passe
+ *
+ * @param [type] $username
+ * @param [type] $password
+ * @return void
+ */
+    function createSession($username, $password) {
+        session_start();
+        $_SESSION['username'] = $username;
+        $_SESSION['password'] = $password;
+    }
+
+    verifyLogin();
 ?>
