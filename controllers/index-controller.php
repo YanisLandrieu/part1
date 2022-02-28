@@ -7,11 +7,14 @@
  * @return void
  */
     function verifyLogin() {
-        include_once('./my-config.php');
+        include_once('../my-config.php');
         if((isset($_POST['login'])) && (isset($_POST['password']))) {
             if(($_POST['login'] == $informationLogin['login']) && ($_POST['password'] == $informationLogin['mdp'])){
                 createSession($_POST['login'], $_POST['password']);
                 header("Location: http://part1.test/views/dashbord.php");
+            }
+            else{
+                header("Location: http://part1.test");
             }
         }
     }

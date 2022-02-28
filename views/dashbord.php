@@ -28,7 +28,7 @@
             <br><button type="submit" class="btn ">Upload</button><br>
             <br><button type="submit" class="btn ">Gallery</button>
         </form><br>
-        <a style="text-decoration: none; color:white; margin-left: 105px;" class="text-center mt-4"  href="">Déconnexion</a>
+        <a style="text-decoration: none; color:white; margin-left: 105px;" class="text-center mt-4"  href="http://part1.test">Déconnexion</a>
     </div>
 </body>
 

@@ -1,6 +1,5 @@
 <?php 
-    include_once 'my-config.php';
-    require_once('./controllers/index-controller.php');
+
 
 ?>
 
