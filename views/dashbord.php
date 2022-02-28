@@ -1,3 +1,8 @@
+<?php 
+
+include_once('../my-config.php');
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -18,11 +23,11 @@
     <div class="wrapper">
         <div class="text-center mt-4 name">
             <p class="titre">allPix</p>
-            <p>Bonjour, Admin</p>
+            <p>Bonjour, <?= $informationLogin['login']; ?></p>
         </div>
         <div class="text-center mt-3 name">
-            <p>Quota : </p>
-            <p>Total image(s) :</p>
+            <p>Quota : <?= $informationLogin['quota']; ?> / 50 Mo</p>
+            <p>Total image(s) : <?= $informationLogin['formule']; ?></p>
         </div>
         <form action="" method="post" enctype="multipart/form-data" style="margin-left: 90px;">
             <br><button type="submit" class="btn ">Upload</button><br>

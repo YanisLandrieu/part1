@@ -12,7 +12,7 @@
     $informationLogin = [
         'login' => 'moi',
         'mdp' => 1234,
-        'formule' => 10,
+        'formule' => 0,
         'quota' => 0
     ];
 
