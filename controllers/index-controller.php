@@ -3,13 +3,21 @@
 
     // Vérification des données de login
 
-    var_dump($_POST);
-    var_dump($informationLogin);
+    // var_dump($_POST);
+    // var_dump($informationLogin);
+    echo $informationLogin['mdp'];
 
-    // if(!($_POST == $informationLogin[0])){
-    //     echo "mauvais login";
-    // }
-    // if(!($_POST == $informationLogin[1])){
-    //        echo "mauvais mdp";
+    // function verifyLogin() {
+        if((isset($_POST['login'])) && (isset($_POST['password']))){
+            if($_POST['password'] == $informationLogin['mdp']){
+                echo 'test';
+            }
+            else{
+                echo 'fail 2';
+            }
+        }
+        else{
+            echo 'fail 1';
+        }
     // }
 ?>
