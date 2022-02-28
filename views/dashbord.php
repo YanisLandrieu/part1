@@ -1,8 +1,3 @@
-<?php 
-
-include_once('../my-config.php');
-
-?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -23,17 +18,21 @@ include_once('../my-config.php');
     <div class="wrapper">
         <div class="text-center mt-4 name">
             <p class="titre">allPix</p>
-            <p>Bonjour, <?= $informationLogin['login']; ?></p>
+            <p>Bonjour, Admin</p>
         </div>
         <div class="text-center mt-3 name">
-            <p>Quota : <?= $informationLogin['quota']; ?> / 50 Mo</p>
-            <p>Total image(s) : <?= $informationLogin['formule']; ?></p>
+            <p>Quota : </p>
+            <p>Total image(s) :</p>
         </div>
-        <form action="" method="post" enctype="multipart/form-data" style="margin-left: 90px;">
-            <br><button type="submit" class="btn ">Upload</button><br>
-            <br><button type="submit" class="btn ">Gallery</button>
-        </form><br>
-        <a style="text-decoration: none; color:white; margin-left: 105px;" class="text-center mt-4"  href="http://part1.test">Déconnexion</a>
+        <form action="" method="post" enctype="multipart/form-data">
+            <button type="submit" class="btn ">Upload</button>
+            <input style="margin-left: 60px;" type="file" name="fileToUpload" id="fileToUpload">
+        </form>
+        <p style="margin-left: 90px;">vos message ici</p>
+        <p style="margin-left: 90px;">- upload ok</p>
+        <p style="margin-left: 90px;">- upload ok</p>
+        <button style="margin-left: 90px;" type="submit" class="btn ">Gallery</button><br>
+        <br><a style="text-decoration: none; color:white; margin-left: 105px;" class="text-center mt-4" href="http://part1.test">Déconnexion</a>
     </div>
 </body>
 

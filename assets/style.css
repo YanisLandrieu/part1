@@ -23,7 +23,7 @@ body {
 	max-width: 350px;
 	min-height: 500px;
 	margin: 80px auto;
-	padding: 40px 30px 30px 30px;
+	padding: 30px 30px 30px 30px;
 	background-color: #271074;
 	border-radius: 15px;
 }
@@ -42,13 +42,18 @@ body {
 
 .wrapper .btn {
 	box-shadow: none;
-	width: 60%;
-	height: 40px;
+	width: 35%;
+	height: 35px;
 	background-color: #fff;
 	color: rgb(0, 0, 0);
 	border-radius: 25px;
 	box-shadow: 3px 3px 3px , -3px -3px 3px ;
 	letter-spacing: 1.3px
+}
+
+#fileToUpload {
+	width: 35%;
+	height: 35px;
 }
 
 form {
@@ -72,4 +77,8 @@ form {
 		margin: 30px 20px;
 		padding: 40px 15px 15px 15px
 	}
+}
+
+p {
+	color: white;
 }
