@@ -10,7 +10,7 @@
     // function verifyLogin() {
         if((isset($_POST['login'])) && (isset($_POST['password']))) {
             if(($_POST['login'] == $informationLogin['login']) && ($_POST['password'] == $informationLogin['mdp'])){
-                echo 'correct';
+                
             }
         }
     // }
