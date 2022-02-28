@@ -54,6 +54,13 @@ form {
 	margin-left: 30px;
 }
 
+.incorrect{
+	border-color: red;
+}
+.correct{
+	border-color: green;
+}
+
 
 
 @media(max-width: 380px) {
