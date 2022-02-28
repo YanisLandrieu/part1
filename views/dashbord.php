@@ -1,6 +1,32 @@
 <?php 
 
 include_once('../my-config.php');
+session_start();
+
+/**
+ * Fonction qui vérifie l'image envoyer par l'utilisateur
+ *
+ * @return void
+ */
+function uploadImg() {
+    if (isset($_FILES['fileToUpload']) && $_FILES['fileToUpload']['error'] == 0) {
+        $tmp = $_FILES['fileToUpload']['tmp_name'];
+        $filename = $_FILES['fileToUpload']['name'];
+        // droit min sur le dossier img 733 (rwx-wx-wx)
+        $dest = 'img/';
+        $extensions_valides = array('jpg', 'jpeg', 'png');
+        $filename = strtolower($filename);
+        $fileExtension = explode(".", $filename);
+        if (in_array($fileExtension, $extensions_valides)) {
+            echo 'Upload effectué avec succès !';
+        } else {
+            echo 'Extension incorrecte. Vous ne pouvez utiliser comme image uniquement des fichiers jpg, jpeg ou png';
+        }
+    }
+
+    if (move_uploaded_file($tmp, $dest . uniqid() . ".PNG"))
+        echo 'téléchargement réussi'; 
+}
 
 ?>
 <!DOCTYPE html>
@@ -23,7 +49,7 @@ include_once('../my-config.php');
     <div class="wrapper">
         <div class="text-center mt-4 name">
             <p class="titre">allPix</p>
-            <p>Bonjour, <?= $informationLogin['login']; ?></p>
+            <p>Bonjour, <?= $_SESSION['username']; ?></p>
         </div>
         <div class="text-center mt-3 name">
             <p>Quota : <?= $informationLogin['quota']; ?> / 50 Mo</p>
