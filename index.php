@@ -27,7 +27,7 @@
             <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span> <input type="text" name="login" id="login" class="<?= ($_POST['login'] == $informationLogin['login']) ? 'correct' : 'incorrect'; ?>"></div>
             <label for="pwd">Password</label>
             <div class="form-field d-flex align-items-center"> <span class="fas fa-key"></span> <input type="password" name="password" id="pwd"  class="<?= ($_POST['password'] == $informationLogin['mdp']) ? 'correct' : 'incorrect'; ?>"></div><br>
-            <button type="submit" class="btn mt-3"> <a style="text-decoration: none; color:black;" href="./views/dashbord.php">Connexion</a></button>
+            <button type="submit" class="btn mt-3">Connexion</button>
         </form>
         </div>
 </body>
