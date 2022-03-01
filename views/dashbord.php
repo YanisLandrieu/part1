@@ -9,8 +9,9 @@ if ($imgError == null) {
 
 date_default_timezone_set('Europe/Paris');
 
-
-
+// Tableau des jours de la semaine en français
+$DaysName = [1 =>'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
+$currDay = $DaysName[date('N')];
 
 
 
@@ -38,9 +39,9 @@ date_default_timezone_set('Europe/Paris');
             <p>Bonjour, <?= $_SESSION['username']; ?></p>
         </div>
         <div class="text-center mt-3 name">
-            <p>Quota : <?= $informationLogin['quota']; ?> / 50000 ko</p>
+            <p>Quota : <?= $informationLogin['quota']; ?>ko / 50 Mo</p>
             <p>Total image(s) : <?= $informationLogin['formule']; ?></p>
-            <p style="margin-left: -65px;"><?php echo date("l d/m/y H:i:s");  ?></p>
+            <p style="margin-left: -65px;"><?= $currDay, date(" d/m/y H:i:s");  ?></p>
         </div>
         <form action="http://part1.test/controllers/dashboard-controller.php" method="post" enctype="multipart/form-data">
             <input style="margin-left: 40px;" type="file" name="fileToUpload" id="fileToUpload">

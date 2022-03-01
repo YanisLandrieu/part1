@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Fonction qui vérifie l'image envoyer par l'utilisateur
  *
