@@ -66,7 +66,7 @@ function getFileSize() {
             <button type="submit" class="btn ">Upload</button>
             <input style="margin-left: 60px;" type="file" name="fileToUpload" id="fileToUpload">
         </form>
-        <p style="margin-left: 90px;">vos message ici</p>
+        <p style="margin-left: 90px;">vos message icI</p>
         <p style="margin-left: 90px;">- upload ok</p>
         <p style="margin-left: 90px;">- upload ok</p>
         <button style="margin-left: 90px;" type="submit" class="btn ">Gallery</button><br>
