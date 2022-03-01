@@ -33,7 +33,7 @@ session_start();
         </div>
         <div class="text-center mt-4 name" style="background-color: white; width: 90%; height: 200px; margin-left: 15px;">
             
-        </div><br>
+        </div>
         <br><a style="text-decoration: none; color:white; margin-left: 105px;" class="text-center mt-4" href="http://part1.test/views/dashbord.php">Dashboard</a>
     </div>
 </body>
