@@ -1,6 +1,5 @@
 <?php 
 
-include_once('../my-config.php');
 session_start();
 
 /**
@@ -9,6 +8,7 @@ session_start();
  * @return void
  */
 function uploadImg() {
+    include_once('../my-config.php');
     if (isset($_FILES['fileToUpload']) && $_FILES['fileToUpload']['error'] == 0) {
         $tmp = $_FILES['fileToUpload']['tmp_name'];
         $filename = $_FILES['fileToUpload']['name'];
@@ -17,6 +17,9 @@ function uploadImg() {
         $extensions_valides = array('jpg', 'jpeg', 'png');
         $filename = strtolower($filename);
         $fileExtension = explode(".", $filename);
+        if(!(getFileSize() <= $informationLogin['quota'])){
+            echo 'l\'image est trop lourde';
+        }
         if (in_array($fileExtension, $extensions_valides)) {
             echo 'Upload effectué avec succès !';
         } else {
@@ -26,6 +29,10 @@ function uploadImg() {
 
     if (move_uploaded_file($tmp, $dest . uniqid() . ".PNG"))
         echo 'téléchargement réussi'; 
+}
+
+function getFileSize() {
+    return $_FILES['fileToUpload']['size'];
 }
 
 ?>
