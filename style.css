@@ -16,7 +16,7 @@ label {
 }
 
 body {
-	background-color: #271074;
+	background-color: #271074 ;
 }
 
 .wrapper {
@@ -37,7 +37,10 @@ body {
 	color: rgb(255, 255, 255)
 }
 
-
+.connexion {
+	width: 60%;
+	height: 40px;
+}
 
 
 .wrapper .btn {
@@ -71,6 +74,9 @@ form {
 	font-size: 2rem;
 }
 
+.mt-3 {
+	width: 120%;
+}
 
 @media(max-width: 380px) {
 	.wrapper {

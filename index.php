@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- css -->
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./style.css">
     <!-- js -->
     <script src="./assets/script.js"></script>
     <!-- bootstrap -->
@@ -26,7 +26,7 @@
             <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span> <input type="text" name="login" id="login" class="<?= ($_POST['login'] == $informationLogin['login']) ? 'correct' : 'incorrect'; ?>"></div>
             <label for="pwd">Password</label>
             <div class="form-field d-flex align-items-center"> <span class="fas fa-key"></span> <input type="password" name="password" id="pwd"  class="<?= ($_POST['password'] == $informationLogin['mdp']) ? 'correct' : 'incorrect'; ?>"></div><br>
-            <button type="submit" class="btn mt-3">Connexion</button>
+            <button type="submit" class="btn mt-3 connexion">Connexion</button>
         </form>
         </div>
 </body>
