@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 /**
  * Fonction qui vérifie l'image envoyer par l'utilisateur
  *

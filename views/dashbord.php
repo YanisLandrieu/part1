@@ -1,6 +1,6 @@
 <?php
 include_once('../my-config.php');
-include_once('../controllers/dashboard-controller.php');
+session_start();
 
 
 ?>
@@ -31,7 +31,7 @@ include_once('../controllers/dashboard-controller.php');
             <p>Total image(s) : <?= $informationLogin['formule']; ?></p>
         </div>
         <form action="http://part1.test/controllers/dashboard-controller.php" method="post" enctype="multipart/form-data">
-            <input style="margin-left: 60px;" type="file" name="fileToUpload" id="fileToUpload">
+            <input style="margin-left: 40px;" type="file" name="fileToUpload" id="fileToUpload">
             <button type="submit" class="btn ">Upload</button>
         </form>
         <p style="margin-left: 90px;">vos message icI</p>
