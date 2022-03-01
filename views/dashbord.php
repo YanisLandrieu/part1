@@ -1,5 +1,8 @@
-<?php 
+<?php
 include_once('../my-config.php');
+include_once('../controllers/dashboard-controller.php');
+
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -31,9 +34,13 @@ include_once('../my-config.php');
             <input style="margin-left: 60px;" type="file" name="fileToUpload" id="fileToUpload">
             <button type="submit" class="btn ">Upload</button>
         </form>
-        <p style="margin-left: 90px;"><?=$imgError;?></p>
-        <button style="margin-left: 90px;" type="submit" class="btn ">Gallery</button><br>
-        <br><a style="text-decoration: none; color:white; margin-left: 105px;" class="text-center mt-4" href="http://part1.test">Déconnexion</a>
+        <p style="margin-left: 90px;">vos message icI</p>
+        <p style="margin-left: 90px;">- upload ok</p>
+        <p style="margin-left: 90px;">- upload ok</p>
+        <a href="http://part1.test/views/gallery.php">
+            <button style="margin-left: 90px;" type="submit" class="btn ">Gallery</button><br>
+        </a>
+        <br><a style="text-decoration: none; color:white; margin-left: 95px;" class="text-center mt-4" href="http://part1.test">Déconnexion</a>
     </div>
 </body>
 
