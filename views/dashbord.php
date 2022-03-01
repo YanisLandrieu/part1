@@ -1,5 +1,5 @@
 <?php 
-
+include_once('../my-config.php');
 session_start();
 
 /**
@@ -59,8 +59,8 @@ function getFileSize() {
             <p>Bonjour, <?= $_SESSION['username']; ?></p>
         </div>
         <div class="text-center mt-3 name">
-            <p>Quota : </p>
-            <p>Total image(s) :</p>
+            <p>Quota : <?= $informationLogin['quota']; ?> / 50 Mo</p>
+            <p>Total image(s) : <?= $informationLogin['formule']; ?></p>
         </div>
         <form action="" method="post" enctype="multipart/form-data">
             <button type="submit" class="btn ">Upload</button>
