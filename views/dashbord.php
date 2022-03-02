@@ -2,19 +2,11 @@
 include_once('../my-config.php');
 session_start();
 
-
-if ($imgError == null) {
-    $imgError = "il faut upload une image";
-}
-
+// On définie la timezone en France
 date_default_timezone_set('Europe/Paris');
-
 // Tableau des jours de la semaine en français
 $DaysName = [1 =>'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
 $currDay = $DaysName[date('N')];
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -39,7 +31,7 @@ $currDay = $DaysName[date('N')];
             <p>Bonjour, <?= $_SESSION['username']; ?></p>
         </div>
         <div class="text-center mt-3 name">
-            <p>Quota : <?= $informationLogin['quota']; ?>ko / 50 Mo</p>
+            <p>Quota : <?= TailleDossier("../img"); ?>ko / 50 Mo</p>
             <p>Total image(s) : <?= $informationLogin['formule']; ?></p>
             <p style="margin-left: -65px;"><?= $currDay, date(" d/m/y H:i:s");  ?></p>
         </div>
@@ -47,7 +39,7 @@ $currDay = $DaysName[date('N')];
             <input style="margin-left: 40px;" type="file" name="fileToUpload" id="fileToUpload">
             <button type="submit" class="btn ">Upload</button>
         </form>
-       <p style="margin-left: 70px;"><?= $imgError ?></p>
+        <p style="margin-left: 70px;"><?= $imgError ?></p>
         <a href="http://part1.test/views/gallery.php">
             <button style="margin-left: 90px;" type="submit" class="btn ">Gallery</button><br>
         </a>

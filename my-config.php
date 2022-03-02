@@ -13,7 +13,7 @@
         'login' => 'moi',
         'mdp' => 1234,
         'formule' => 0,
-        'quota' => 50
+        'quota' => 0
     ];
 
 ?>
