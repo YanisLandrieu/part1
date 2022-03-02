@@ -72,6 +72,16 @@ function TailleDossier($Rep)
         return $Taille;
     }
 var_dump(TailleDossier("../img"));
+// var_dump(scandir("C:\Users\Utilisateur\Documents\GitHub\part1\img"));
+function getNumberImg() {
+    $nbImg = 0;
+    $arrayImg = scandir("C:\Users\Utilisateur\Documents\GitHub\part1\img");
+    foreach ($arrayImg as $value) {
+        $nbImg++;
+    } 
+    return $nbImg;
+}
+
 /**
  * Récupère la taille d'une image
  *

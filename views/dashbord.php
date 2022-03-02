@@ -32,7 +32,7 @@ $currDay = $DaysName[date('N')];
         </div>
         <div class="text-center mt-3 name">
             <p>Quota : <?= TailleDossier("../img"); ?> / 50 Mo</p>
-            <p>Total image(s) : <?= $informationLogin['formule']; ?></p>
+            <p>Total image(s) : <?= getNumberImg(); ?></p>
             <p style="margin-left: -65px;"><?= $currDay, date(" d/m/y H:i:s");  ?></p>
         </div>
         <form action="http://part1.test/controllers/dashboard-controller.php" method="post" enctype="multipart/form-data">
