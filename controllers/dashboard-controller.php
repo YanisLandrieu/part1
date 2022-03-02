@@ -17,17 +17,18 @@ function uploadImg() {
         $extensions_valides = array('jpg', 'jpeg', 'png');
         $filename = strtolower($filename);
         $fileExtension = explode(".", $filename);
+        $uniqidImg = uniqid() . ".png";
 
         // On vérifie si l'extension de l'image est valide
         if (in_array($fileExtension[1], $extensions_valides)) {
             $imgError = 'Upload effectué avec succès !';
 
             // On vérifie si la taille de l'image est plus lourde que l'espace restant
-            if(!(getFileSize() < 50000 - TailleDossier("../img"))) {
+            if(!(getFileSize() < $photoMaxSize - TailleDossier("../img"))) {
                 $imgError = 'l\'image est trop lourde';
                 require_once("../views/dashbord.php");
             }
-            elseif (move_uploaded_file($tmp, $dest . uniqid() . ".png")){
+            elseif (move_uploaded_file($tmp, $dest . $uniqidImg)){
 
                 // On ajoute la taille de l'image au quota
                 $informationLogin['quota'] = $informationLogin['quota'] + getFileSize();
@@ -46,7 +47,12 @@ function uploadImg() {
         require_once("../views/dashbord.php");
     }
 }
-
+/**
+ * Fonction qui calcule la taille du dossier img
+ *
+ * @param [type] $Rep
+ * @return int
+ */
 function TailleDossier($Rep)
     {
         $Racine=opendir($Rep);
@@ -75,10 +81,10 @@ var_dump(TailleDossier("../img"));
 function getFileSize() {
     return $_FILES['fileToUpload']['size'];
 }
-if(isset($_SESSION['username'])){
+// if(isset($_SESSION['username'])){
     uploadImg();
-} else {
-    header("Location: http://part1.test");
-}
+// } else {
+    // header("Location: http://part1.test");
+// }
 
 ?>

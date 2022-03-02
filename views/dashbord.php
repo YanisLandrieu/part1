@@ -31,7 +31,7 @@ $currDay = $DaysName[date('N')];
             <p>Bonjour, <?= $_SESSION['username']; ?></p>
         </div>
         <div class="text-center mt-3 name">
-            <p>Quota : <?= TailleDossier("../img"); ?>ko / 50 Mo</p>
+            <p>Quota : <?= TailleDossier("../img"); ?> / 50 Mo</p>
             <p>Total image(s) : <?= $informationLogin['formule']; ?></p>
             <p style="margin-left: -65px;"><?= $currDay, date(" d/m/y H:i:s");  ?></p>
         </div>

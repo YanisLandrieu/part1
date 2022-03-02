@@ -1,7 +1,11 @@
 <?php
+// dossier root
+
+    // const root = __DIR__.'\\';
+
 // Taille max des photos
 
-    $photoMaxSize = 50;
+    $photoMaxSize = 50 * 1024 * 1024;
 
 // Les formats de photos autorisées
 
