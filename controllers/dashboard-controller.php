@@ -75,6 +75,10 @@ var_dump(TailleDossier("../img"));
 function getFileSize() {
     return $_FILES['fileToUpload']['size'];
 }
+if(isset($_SESSION['username'])){
+    uploadImg();
+} else {
+    header("Location: http://part1.test");
+}
 
-uploadImg();
 ?>
