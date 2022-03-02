@@ -19,9 +19,9 @@ session_start();
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- lightbox css -->
-    <link href="path/to/lightbox.css" rel="stylesheet" />
+    <link href="../node_modules/lightbox2/dist/css/lightbox.min.css" rel="stylesheet" />
     <!-- lightbox js -->
-    <script src="path/to/lightbox.js"></script>
+    <script src="../node_modules/lightbox2/dist/js/lightbox-plus-jquery.js" async></script>
     <title>allPIX</title>
 </head>
 
@@ -32,10 +32,12 @@ session_start();
             <p>Bonjour, <?= $_SESSION['username']; ?></p>
         </div>
         <div class="text-center mt-4 name" style="background-color: white; width: 90%; height: 200px; margin-left: 15px;">
-            
+        <a class="example-image-link" href="../imgtest/capture01.PNG" data-lightbox="example-set" data-title="Capture01"><img class="example-image" height="100" width="100" src="../imgtest/capture01.PNG" alt="capture01" /></a>
+        <a class="example-image-link" href="../imgtest/capture02.PNG" data-lightbox="example-set" data-title="Capture02"><img class="example-image" height="100" width="100" src="../imgtest/capture02.PNG" alt="capture02" /></a>
         </div>
         <br><a style="text-decoration: none; color:white; margin-left: 105px;" class="text-center mt-4" href="http://part1.test/views/dashbord.php">Dashboard</a>
     </div>
 </body>
+
 
 </html>

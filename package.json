@@ -1,0 +1,22 @@
+{
+  "name": "part1",
+  "version": "1.0.0",
+  "description": "> Nous allons mettre en place la gallerie photos qui permettra, de manière ludique, de partager les photos uploadées.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YanisLandrieu/part1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YanisLandrieu/part1/issues"
+  },
+  "homepage": "https://github.com/YanisLandrieu/part1#readme",
+  "dependencies": {
+    "lightbox2": "^2.11.3"
+  }
+}
