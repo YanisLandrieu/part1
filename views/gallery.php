@@ -32,8 +32,7 @@ session_start();
             <p>Bonjour, <?= $_SESSION['username']; ?></p>
         </div>
         <div class="text-center mt-4 name" style="background-color: white; width: 90%; height: 200px; margin-left: 15px;">
-        <a class="example-image-link" href="../imgtest/capture01.PNG" data-lightbox="example-set" data-title="Capture01"><img class="example-image" height="100" width="100" src="../imgtest/capture01.PNG" alt="capture01" /></a>
-        <a class="example-image-link" href="../imgtest/capture02.PNG" data-lightbox="example-set" data-title="Capture02"><img class="example-image" height="100" width="100" src="../imgtest/capture02.PNG" alt="capture02" /></a>
+            <?= buildGallery(); ?>
         </div>
         <br><a style="text-decoration: none; color:white; margin-left: 105px;" class="text-center mt-4" href="http://part1.test/controllers/dashboard-controller.php">Dashboard</a>
     </div>

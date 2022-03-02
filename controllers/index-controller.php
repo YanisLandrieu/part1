@@ -1,5 +1,4 @@
 <?php 
-    // Vérification des données de login
 
 /**
  * Fonction qui vérifie le mot de passe
@@ -29,7 +28,7 @@
     function createSession($username, $password) {
         session_start();
         $_SESSION['username'] = $username;
-        $_SESSION['password'] = $password;
+        $_SESSION['password'] = hash('md5',$password);
     }
 
     verifyLogin();

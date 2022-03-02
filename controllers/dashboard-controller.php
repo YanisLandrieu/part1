@@ -31,10 +31,8 @@ function uploadImg() {
             elseif (move_uploaded_file($tmp, $dest . $uniqidImg)){
 
                 // On ajoute la taille de l'image au quota
-                $informationLogin['quota'] = $informationLogin['quota'] + getFileSize();
+                $informationLogin['quota'] = $Taille;
 
-                // On ajoute 1 au compteur d'image
-                $informationLogin['formule'] = $informationLogin['formule'] + 1;
                 require_once("../views/dashbord.php");
             }
         } // Sinon on renvoie un message d'erreur
@@ -71,14 +69,24 @@ function TailleDossier($Rep)
         closedir($Racine);
         return $Taille;
     }
-var_dump(TailleDossier("../img"));
-// var_dump(scandir("C:\Users\Utilisateur\Documents\GitHub\part1\img"));
+// var_dump(TailleDossier("../img"));
+
+/**
+ * Fonction qui calcule le nombre d'image totale dans le fichier img
+ *
+ * @return int
+ */
 function getNumberImg() {
     $nbImg = 0;
+    // On créer un tableau qui possède toute les images du dossier img
     $arrayImg = scandir("C:\Users\Utilisateur\Documents\GitHub\part1\img");
-    foreach ($arrayImg as $value) {
+    // On retire les points du tableau
+    $imgFolder = array_diff($arrayImg, array('..', '.'));
+    // On utilise foreach pour compter le nombre de fichier existant
+    foreach ($imgFolder as $value) {
         $nbImg++;
     } 
+    $informationLogin['formule'] = $nbImg;
     return $nbImg;
 }
 

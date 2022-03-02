@@ -40,7 +40,7 @@ $currDay = $DaysName[date('N')];
             <button type="submit" class="btn ">Upload</button>
         </form>
         <p style="margin-left: 70px;"><?= $imgError ?></p>
-        <a href="http://part1.test/views/gallery.php">
+        <a href="http://part1.test/controllers/gallery-controller.php">
             <button style="margin-left: 90px;" type="submit" class="btn ">Gallery</button><br>
         </a>
         <br><a style="text-decoration: none; color:white; margin-left: 95px;" class="text-center mt-4" href="http://part1.test">Déconnexion</a>
