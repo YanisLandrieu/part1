@@ -24,9 +24,10 @@
         <div class="text-center mt-4 name"> allPIX </div>
         <form method="POST" class="p-3 mt-3" action="./controllers/index-controller.php">
             <label for="login">Login</label>
-            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span> <input type="text" name="login" id="login" class="<?= ($_POST['login'] == $informationLogin['login']) ? 'correct' : 'incorrect'; ?>"></div>
+            <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span> <input type="text" name="login" id="login" class=""></div>
             <label for="pwd">Password</label>
-            <div class="form-field d-flex align-items-center"> <span class="fas fa-key"></span> <input type="password" name="password" id="pwd"  class="<?= ($_POST['password'] == $informationLogin['mdp']) ? 'correct' : 'incorrect'; ?>"></div><br>
+            <div class="form-field d-flex align-items-center"> <span class="fas fa-key"></span> <input type="password" name="password" id="pwd"  class=""></div><br>
+            <span style="text-decoration: none; color: white;"><?= isset($_GET['error']) ? ($_GET['error'] == 1 ? 'Login ou mot de passe incorrect' : '') : '';?></span>
             <button type="submit" class="btn mt-3 connexion">Connexion</button>
         </form>
         </div>

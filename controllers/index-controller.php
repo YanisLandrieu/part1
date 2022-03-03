@@ -13,7 +13,7 @@
                 require_once('./dashboard-controller.php');
             }
             else{
-                header("Location: http://part1.test");
+                header("Location: http://part1.test?error=1");
             }
         }
     }
