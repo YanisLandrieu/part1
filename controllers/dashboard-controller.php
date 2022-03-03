@@ -79,7 +79,7 @@ function TailleDossier($Rep)
 function getNumberImg() {
     $nbImg = 0;
     // On créer un tableau qui possède toute les images du dossier img
-    $arrayImg = scandir("C:\Users\Utilisateur\Documents\GitHub\part1\img");
+    $arrayImg = scandir("C:\Users\yanis\Documents\GitHub\part1\img");
     // On retire les points du tableau
     $imgFolder = array_diff($arrayImg, array('..', '.'));
     // On utilise foreach pour compter le nombre de fichier existant
