@@ -10,7 +10,7 @@
         if(isset($_POST['login']) && isset($_POST['password'])) {
             if($_POST['login'] == $informationLogin['login'] && $_POST['password'] == $informationLogin['mdp']){
                 createSession($_POST['login'], $_POST['password']);
-                header("location: http://part1.test/controllers/dashboard-controller.php");
+                require_once('./dashboard-controller.php');
             }
             else{
                 header("Location: http://part1.test");

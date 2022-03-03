@@ -1,4 +1,8 @@
 <?php 
+include('./no-allowed-controller.php');
+if (!isset($_SESSION)) {
+    session_start();
+}
 
 /**
  * Fonction qui affiche le nombre d'image necessaire
@@ -8,7 +12,7 @@
 function buildGallery() {
 
     // On créer un tableau qui possède toute les images du dossier img
-    $arrayImg = scandir("C:\Users\yanis\Documents\GitHub\part1\img");
+    $arrayImg = scandir("C:\Users\Utilisateur\Documents\GitHub\part1\img");
     // On retire les points du tableau
     $imgFolder = array_diff($arrayImg, array('..', '.'));
     // On utilise foreach pour afficher le nombre d'image existant
@@ -17,5 +21,10 @@ function buildGallery() {
     }
 }
 
-require_once('../views/gallery.php');
+if(isLogged()){
+    require_once('../views/gallery.php');
+} else {
+    require_once('../views/no-allowed.php');
+}
+
 ?>

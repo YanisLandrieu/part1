@@ -1,4 +1,5 @@
 <?php
+include('./no-allowed-controller.php');
 /**
  * Fonction qui vérifie l'image envoyer par l'utilisateur
  *
@@ -81,7 +82,7 @@ function TailleDossier($Rep)
 function getNumberImg() {
     $nbImg = 0;
     // On créer un tableau qui possède toute les images du dossier img
-    $arrayImg = scandir("C:\Users\yanis\Documents\GitHub\part1\img");
+    $arrayImg = scandir("C:\Users\Utilisateur\Documents\GitHub\part1\img");
     // On retire les points du tableau
     $imgFolder = array_diff($arrayImg, array('..', '.'));
     // On utilise foreach pour compter le nombre de fichier existant
@@ -110,25 +111,10 @@ function getFileSize() {
  * @param [type] $userSessionPassw
  * @return boolean
  */
-function verifylogin($userSessionName, $userSessionPassw) {
-    include('../my-config.php');
-    if (isset($_SESSION['username']) && isset($_SESSION['password'])) {
-        if (hash_equals($userSessionName, $informationLogin['login']) && hash_equals($userSessionPassw, hash('md5',$informationLogin['mdp']))) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-    else {
-        return false;
-    }
-}
 
-// if(verifylogin($_SESSION['username'], $_SESSION['password'])){
+if(isLogged()){
     uploadImg();
-// } else {
-    // header("Location: http://part1.test");
-// }
-
+} else {
+    require_once('../views/no-allowed.php');
+}
 ?>

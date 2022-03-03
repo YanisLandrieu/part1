@@ -1,6 +1,6 @@
 <?php
 include_once('../my-config.php');
-session_start();
+// session_start();
 
 // On définie la timezone en France
 date_default_timezone_set('Europe/Paris');
@@ -43,7 +43,7 @@ $currDay = $DaysName[date('N')];
         <a href="http://part1.test/controllers/gallery-controller.php">
             <button style="margin-left: 90px;" type="submit" class="btn ">Gallery</button><br>
         </a>
-        <br><a style="text-decoration: none; color:white; margin-left: 95px;" class="text-center mt-4" href="http://part1.test">Déconnexion</a>
+        <br><a style="text-decoration: none; color:white; margin-left: 95px;" class="text-center mt-4" href="http://part1.test/controllers/deconnection-controller.php">Déconnexion</a>
     </div>
 </body>
 
