@@ -49,7 +49,7 @@ Cette page permettra de configurer votre application web avec les données suiva
 
 Lorsque nous arrivons sur le site, nous arrivons sur une page de *login* qui permettra à l'utilisateur de s'identifier.  
 
-![exemple](img/login.PNG "exemple")  
+![exemple](imgtest/login.PNG "exemple")  
 
 Une fois identifié, l'utilisateur sera redirigé vers *dashboard.php*.  
 
@@ -60,7 +60,7 @@ Une fois identifié, l'utilisateur sera redirigé vers *dashboard.php*.
 ## **La page *dashboard.php* :**
 
 La page "dashboard.php" sera accessible **uniquement** pour une personne authentifiée.  
-![exemple](img/admin.PNG "exemple")  
+![exemple](imgtest/admin.PNG "exemple")  
 
 ***Attention, le formulaire permettant d'upload les images sera également sur la page dashboard.php***  
 2 Boutons seront présents :
@@ -73,14 +73,14 @@ Rappel des conditions pour que l'upload soit valide :
 
 - Un **bouton gallery** permettant d'accéder à la gallery.
 
-![exemple](img/uploadv2.PNG "exemple")  
+![exemple](imgtest/uploadv2.PNG "exemple")  
 
 *TIPS* pensez à appeler le controller de la page.
 
 ## **La page *gallery.php* :**
 
 Vous allez devoir faire une page "gallery" utilisant : lightbox (<https://www.lokeshdhakar.com/projects/lightbox2/?#license>).
-![exemple](img/admin-gallery.PNG "exemple")  
+![exemple](imgtest/admin-gallery.PNG "exemple")  
 
 *TIPS* pensez à appeler le controller de la page.  
 *TIPS* bien lire la documentation (*ex. utilisation de jquery*).
@@ -88,7 +88,7 @@ Vous allez devoir faire une page "gallery" utilisant : lightbox (<https://www.lo
 ## **La page *no-allowed.php* :**
 
 Si nous essayons d'accéder à des pages alors que nous ne sommes pas loggés : crevette, homard, langouste ... il faudra afficher une page **no-allowed.php**.  
-![exemple](img/no-allowed.PNG "exemple")  
+![exemple](imgtest/no-allowed.PNG "exemple")  
 
 *TIPS* utilisation du header peux s'avérer utile :).  
 *TIPS* pensez à appeler le controller de la page.
@@ -97,7 +97,7 @@ Si nous essayons d'accéder à des pages alors que nous ne sommes pas loggés : 
 
 La page de déconnexion permet d'informer l'utilisateur qu'il a bien été déconnecté et permettra, s'il le souhaite, retourner sur l'accueil.
 
-![exemple](img/deconnection.PNG "exemple")  
+![exemple](imgtest/deconnection.PNG "exemple")  
 *TIPS* pensez à appeler le controller de la page
 
 > A VOS CLAVIERS !!!!!!! ... oui je sais, là, nous montons vraiment de level :D

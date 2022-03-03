@@ -5,7 +5,7 @@
 
 // Taille max des photos
 
-    $photoMaxSize = 50 * 1024 * 1024;
+    $photoMaxSize = 50;
 
 // Les formats de photos autorisées
 

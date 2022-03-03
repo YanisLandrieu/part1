@@ -31,7 +31,7 @@ function uploadImg() {
             elseif (move_uploaded_file($tmp, $dest . $uniqidImg)){
 
                 // On ajoute la taille de l'image au quota
-                $informationLogin['quota'] = $Taille;
+                $informationLogin['quota'] = TailleDossier("../img");
 
                 require_once("../views/dashbord.php");
             }
@@ -67,6 +67,8 @@ function TailleDossier($Rep)
           }
         }
         closedir($Racine);
+        $Taille = $Taille / 125000;
+        $Taille = round($Taille, 1);
         return $Taille;
     }
 // var_dump(TailleDossier("../img"));
@@ -97,9 +99,33 @@ function getNumberImg() {
  */
 
 function getFileSize() {
-    return $_FILES['fileToUpload']['size'];
+    $fileSize = $_FILES['fileToUpload']['size'] / 125000;
+    return $fileSize;
 }
-// if(isset($_SESSION['username'])){
+
+/**
+ * Fonction qui vérifie si l'utilisateur est connecté
+ *
+ * @param [type] $userSessionName
+ * @param [type] $userSessionPassw
+ * @return boolean
+ */
+function verifylogin($userSessionName, $userSessionPassw) {
+    include('../my-config.php');
+    if (isset($_SESSION['username']) && isset($_SESSION['password'])) {
+        if (hash_equals($userSessionName, $informationLogin['login']) && hash_equals($userSessionPassw, hash('md5',$informationLogin['mdp']))) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    else {
+        return false;
+    }
+}
+
+// if(verifylogin($_SESSION['username'], $_SESSION['password'])){
     uploadImg();
 // } else {
     // header("Location: http://part1.test");

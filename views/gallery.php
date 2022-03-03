@@ -31,7 +31,7 @@ session_start();
             <p class="titre">allPix</p>
             <p>Bonjour, <?= $_SESSION['username']; ?></p>
         </div>
-        <div class="text-center mt-4 name" style="background-color: white; width: 90%; height: 200px; margin-left: 15px;">
+        <div class="text-center mt-4 name" style="background-color: white; width: 90%; height: auto; margin-left: 15px;">
             <?= buildGallery(); ?>
         </div>
         <br><a style="text-decoration: none; color:white; margin-left: 105px;" class="text-center mt-4" href="http://part1.test/controllers/dashboard-controller.php">Dashboard</a>
