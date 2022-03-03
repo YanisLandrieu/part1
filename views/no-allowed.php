@@ -16,7 +16,13 @@
 
 <body>
     <div class="wrapper">
-        <div class="text-center mt-4 name"> allPIX </div>
+        <div class="text-center mt-4 name">
+            <p class="titre">allPix</p>
+        </div><br>
+        <div class="text-center mt-4 name">
+            <p>Bonjour, vous n'avez pas les droits nécessaires pour accéder à cette page </p>
+        </div><br>
+        <br><a style="text-decoration: none; color:white; margin-left: 120px;" class="text-center mt-4" href="http://part1.test/">Accueil</a>
     </div>
 </body>
 
