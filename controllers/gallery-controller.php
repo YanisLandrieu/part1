@@ -12,7 +12,7 @@ if (!isset($_SESSION)) {
 function buildGallery() {
 
     // On créer un tableau qui possède toute les images du dossier img
-    $arrayImg = scandir("C:\Users\Utilisateur\Documents\GitHub\part1\img");
+    $arrayImg = scandir(dirname(__DIR__, 1) . '\img');
     // On retire les points du tableau
     $imgFolder = array_diff($arrayImg, array('..', '.'));
     // On utilise foreach pour afficher le nombre d'image existant
